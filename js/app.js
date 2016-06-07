@@ -117,7 +117,7 @@ function mouseClicked() {
     window.location.href = "./about.html";
   }
   if(TRIGGER_MODE_2){
-    window.location.href = "https://www.instagram.com/1nfinite_1ndustries/";
+    window.open("https://www.instagram.com/1nfinite_1ndustries/");
   }
 }
 
