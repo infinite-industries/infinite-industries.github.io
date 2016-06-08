@@ -4,8 +4,8 @@ var TRIGGER_MODE_1, TRIGGER_MODE_2, NUM_VERTICAL_LINES;
 var titleFont, ctaFont;
 
 function preload() {
-  titleFont = loadFont("./test/fonts/AsimovWid.otf");
-  ctaFont = loadFont("./test/fonts/MechanicalBdCond.otf");
+  titleFont = loadFont("./fonts/AsimovWid.otf");
+  ctaFont = loadFont("./fonts/MechanicalBdCond.otf");
 }
 
 function setup() {
