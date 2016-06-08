@@ -4,8 +4,8 @@ var TRIGGER_MODE_1, TRIGGER_MODE_2, NUM_VERTICAL_LINES;
 var titleFont, ctaFont;
 
 function preload() {
-  titleFont = loadFont("./fonts/AsimovWid.otf");
-  ctaFont = loadFont("./fonts/MechanicalBdCond.otf");
+  titleFont = loadFont("./test/fonts/AsimovWid.otf");
+  ctaFont = loadFont("./test/fonts/MechanicalBdCond.otf");
 }
 
 function setup() {
@@ -97,7 +97,7 @@ function MouseDecorator(){
 
 function mouseClicked() {
   if(TRIGGER_MODE_1){
-    window.location.href = "./about.html";
+    window.location.href = "./test/about.html";
   }
   if(TRIGGER_MODE_2){
     window.open("https://www.instagram.com/1nfinite_1ndustries/");
