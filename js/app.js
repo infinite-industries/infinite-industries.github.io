@@ -1,31 +1,29 @@
-// var fb_logo, twitter_logo, instagram_logo, medium_logo;
-//
-// function preload(){
-//   fb_logo = loadImage(../images/fb_logo.png);
-//   twitter_logo = loadImage(../images/twitter_logo.png);
-//   instagram_logo = loadImage(../images/instagram_logo.png);
-//   medium_logo = loadImage(../images/medium_logo.png);
-// }
-
 
 //Colors -->  #C71585
-var TRIGGER_MODE_1, TRIGGER_MODE_2;
+var TRIGGER_MODE_1, TRIGGER_MODE_2, NUM_VERTICAL_LINES;
+var titleFont, ctaFont;
+
+function preload() {
+  titleFont = loadFont("./fonts/AsimovWid.otf");
+  ctaFont = loadFont("./fonts/MechanicalBdCond.otf");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(25);
   TRIGGER_MODE_1=false;
   TRIGGER_MODE_2=false;
+  NUM_VERTICAL_LINES = 5;
+  main_graphic = new MainGraphic();
   mouse_decorator = new MouseDecorator();
   call_to_action = new CallToAction();
-  //call_to_action.mouseClicked(function(){window.location.href ="https://www.instagram.com/1nfinite_1ndustries/"});
 }
 
 function draw() {
   background(255);
   textAlign(CENTER);
 
-  drawMainGraphic();
+  main_graphic.draw(frameCount);
 
   mouse_decorator.update(frameCount);
   mouse_decorator.draw();
@@ -39,37 +37,36 @@ function draw() {
     TRIGGER_MODE_1=false;
   }
 
-  if((mouseX>width/3)&&(mouseX<width/3*2)&&(mouseY>height-120)&&(mouseY<height)){
+  if((mouseX>width/3)&&(mouseX<width/3*2)&&(mouseY>height-200)&&(mouseY<height-100)){
     TRIGGER_MODE_2=true;
   }
   else{
     TRIGGER_MODE_2=false;
   }
-
 }
 
-function drawMainGraphic(){
-  textSize(random(5,100));
-  fill(45, 45, 45, 60);
-  text("INFINITE.INDUSTRIES", width/2, height/2);
+function MainGraphic(){
+  this.counter_1 = 0;
+  this.pulse_var = 0;
+  this.draw = function(frameR8){
+    textFont(titleFont);
+    noStroke();
+    textSize(abs(sin(frameR8/70))*5+55);
+    this.pulse_var = abs(sin(frameR8/50))*128;
+    // console.log(this.pulse_var);
+    fill(45, 45, 45,this.pulse_var );
+    text("INFINITE.INDUSTRIES", width/2, height/2-10);
 
-  if(random(0,100)<10){
-    var x_1=random(width);
-    line(x_1,0,x_1,height);
-  }
-  if(random(0,100)<10){
-    var x_2=random(width);
-    line(x_2,0,x_2,height);
-  }
-  if(random(0,100)<10){
-    var x_3=random(width);
-    line(x_3,0,x_3,height);
-  }
+    stroke(45, 45, 45, 60);
 
-  textSize(60);
-  fill(0,0,0,255);
-  var main_text = text("INFINITE.INDUSTRIES", width/2, height/2-20);
-
+    for(var i=0;i<NUM_VERTICAL_LINES;i++){
+      drawVertLine(random(0,100))
+    }
+    noStroke();
+    textSize(60);
+    fill(0,0,0,255);
+    var main_text = text("INFINITE.INDUSTRIES", width/2, height/2-20);
+  }
 }
 
 function windowResized() {
@@ -98,20 +95,6 @@ function MouseDecorator(){
   }
 }
 
-
-//
-// function MouseDecorator(){
-//   update : function(){
-//     fill(255,0,127,sin(counter)*64+128);
-//   },
-//
-//   draw : function(){
-//     ellipse(mouseX,mouseY, circle_radius,circle_radius);
-//   }
-// }
-
-
-
 function mouseClicked() {
   if(TRIGGER_MODE_1){
     window.location.href = "./about.html";
@@ -125,17 +108,16 @@ function mouseClicked() {
 function CallToAction(){
 
   this.draw = function(){
+    textFont(ctaFont);
     fill(199,21,133);
     textSize(20);
-    var cta_text= text("Currently Presenting JR SOUTHARD Instagram Residency", width/2, height-100);
+    var cta_text= text("Currently Presenting JR SOUTHARD Instagram Residency", width/2, height-150);
   }
 }
 
-// function drawSocialMedia(){
-//   fill(0);
-//   textSize(20);
-//   text("facebook",width/12*3,height-50);
-//   text("instagram",width/12*5,height-50);
-//   text("twitter",width/12*7,height-50);
-//   text("medium",width/12*9,height-50);
-// }
+function drawVertLine(chance){
+  if(chance<10){
+    var x=random(width);
+    line(x,0,x,height);
+  }
+}
