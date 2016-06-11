@@ -6,6 +6,7 @@ var titleFont, ctaFont;
 function preload() {
   titleFont = loadFont("./fonts/AsimovWid.otf");
   ctaFont = loadFont("./fonts/MechanicalBdCond.otf");
+
 }
 
 function setup() {
