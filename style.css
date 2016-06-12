@@ -65,6 +65,19 @@ a:active {
     color: #C71585;
 }
 
+.social-media-i:link,
+.social-media-i:visited{
+    color: #000;
+}
+
+.social-media-i:hover{
+  color: hotpink;
+}
+
+.social-media-i:active {
+    color: white;
+}
+
 @media only screen and (min-width: 768px) {
   .footer{
     background-color: #f5f5f5;
