@@ -98,7 +98,7 @@ function MouseDecorator(){
 
 function mouseClicked() {
   if(TRIGGER_MODE_1){
-    window.location.href = "./test/about.html";
+    window.location.href = "./about.html";
   }
   if(TRIGGER_MODE_2){
     window.open("https://www.instagram.com/1nfinite_1ndustries/");
