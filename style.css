@@ -17,6 +17,17 @@ body {
   src:url('./fonts/AsimovWid.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Body-Sans';
+  src:url('./fonts/AsimovNar.otf') format('opentype');
+}
+
+.top-nav{
+  margin-top: 5px;
+  font-family: "Mechanic", sans-serif;
+  font-size: 16px;
+}
+
 p{
   font-family: "Mechanic", sans-serif;
   font-size: 20px;
@@ -38,7 +49,7 @@ h3{
      padding-top: 20px;
 }
 
-.fa{
+.social-icon{
   margin-right: 30px;
 }
 
@@ -124,12 +135,99 @@ a:active {
 }
 
 #mc_embed_signup .button:focus,
-#mc_embed_signup .button:active,
-{
-  background-color: #ffffff;
+#mc_embed_signup .button:active,{
+  background-color: #fff;
 }
 
-#mc_embed_signup .button:hover
-{
-  background-color: #ebebeb;
+#mc_embed_signup .button:hover{
+  background-color: #f5f5f5;
+}
+
+.artist-image{
+  width:80%;
+  height:auto;
+}
+.present-artwork{
+  background-color:lightgrey;
+  padding:20px;
+}
+.work-title{
+  font-size: 22px;
+  color:black;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/*----------PRICE MATRIX------------*/
+.price-matrix{
+  max-width:500px;
+  min-width:300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-matrix table{
+  width:100%;
+  border-color: black;
+}
+
+.price-matrix table td{
+  text-align: left;
+  padding:10px;
+  width:85%;
+  font-family: "Body-Sans", sans-serif;
+  font-size: 1em;
+}
+
+.price-matrix .table-bordered {
+    border: 2px solid #000;
+}
+
+.price-matrix h3 {
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+/*.available{
+  background-color:rgba(0, 255, 0, 0.5);
+}
+
+.unavailable{
+  background-color:rgba(255, 0, 0, 0.5);
+}*/
+
+.contact-us{
+  width:100%;
+}
+
+.price-matrix{
+  margin-bottom: 10px;
+}
+.price-matrix .btn{
+  color: #C71585;
+  background-color: #fff;
+  font-family: "Mechanic", sans-serif;
+  font-size: 18px;
+  border: 1px solid #C71585;
+  margin-top: 5px;
+}
+
+.price-matrix .btn:hover{
+  background-color: #f5f5f5;
+}
+.price-matrix .btn:link,
+.price-matrix .btn:visited{
+    color: #000;
+}
+
+.price-matrix .subtext{
+  padding-top: 5px;
+}
+.price-matrix em{
+  font-family: "Body-Sans", sans-serif;
+  font-size: 1em;
+  font-style: normal;
 }

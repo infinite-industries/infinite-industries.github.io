@@ -2,6 +2,7 @@
 //Colors -->  #C71585
 var TRIGGER_MODE_1, TRIGGER_MODE_2, NUM_VERTICAL_LINES;
 var titleFont, ctaFont;
+var TOP_OFFSET=50;
 
 function preload() {
   titleFont = loadFont("./fonts/AsimovWid.otf");
@@ -10,7 +11,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight-TOP_OFFSET);
+
   frameRate(25);
   TRIGGER_MODE_1=false;
   TRIGGER_MODE_2=false;
