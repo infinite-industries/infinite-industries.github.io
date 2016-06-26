@@ -90,10 +90,10 @@ function CallToAction(){
     fill(199,21,133);
     textSize(20);
     if(!MOBILE_MODE){
-      var cta_text= text("Currently Presenting JR SOUTHARD Instagram Residency", width/2, height-150);
+      var cta_text= text("Currently Presenting --> Ming Hong ***Instagram #featuredartist", width/2, height-150);
     }
     else{
-      var cta_text= text("Currently Presenting \nJR SOUTHARD Instagram Residency", width/2, height-150);
+      var cta_text= text("Currently Presenting \nMing Hong ***Instagram #featuredartist", width/2, height-150);
     }
   }
 }
