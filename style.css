@@ -65,6 +65,7 @@ h3{
 
 .artist-listing{
   margin-bottom: 25px;
+  font-size: 18px;
 }
 
 a:link, a:visited{
@@ -177,7 +178,12 @@ a:active {
   padding:10px;
   width:85%;
   font-family: "Body-Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
+}
+
+.price-matrix table td .price-info{
+  font-size: 0.8em;
+  color:grey;
 }
 
 .price-matrix .table-bordered {
@@ -229,6 +235,10 @@ a:active {
 }
 .price-matrix em{
   font-family: "Body-Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-style: normal;
+}
+
+.fa-info-circle{
+  padding-left: 10px;
 }
