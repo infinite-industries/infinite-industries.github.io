@@ -1,15 +1,26 @@
-
 //Colors -->  #C71585
-var TRIGGER_MODE_1, TRIGGER_MODE_2, NUM_VERTICAL_LINES, MOBILE_MODE, MAX_TEXT_SIZE;
+var TRIGGER_MODE_1,
+  TRIGGER_MODE_2,
+  NUM_VERTICAL_LINES,
+  MOBILE_MODE,
+  MAX_TEXT_SIZE,
+  TOP_OFFSET,
+  MOBILE_TOP;
+
+
+
 var titleFont, ctaFont;
-var TOP_OFFSET=50;
+
+var logo;
 
 function preload() {
-  titleFont = loadFont("./fonts/AsimovWid.otf");
-  ctaFont = loadFont("./fonts/MechanicalBdCond.otf");
+  titleFont = loadFont("public/fonts/AsimovWid.otf");
+  ctaFont = loadFont("public/fonts/MechanicalBdCond.otf");
+  logo = loadImage("public/images/site-logo.png");
 }
 
 function setup() {
+  TOP_OFFSET=50;
   createCanvas(windowWidth, windowHeight-TOP_OFFSET);
   testScreenSize();
   frameRate(25);
@@ -71,7 +82,7 @@ function MainGraphic(){
     textFont(titleFont);
     noStroke();
 
-    text("INFINITE.INDUSTRIES", width/2, height/2-10);
+    text("INFINITE.INDUSTRIES", width/2, height/2-10-MOBILE_TOP);
     stroke(45, 45, 45, 60);
 
     for(var i=0;i<NUM_VERTICAL_LINES;i++){
@@ -80,7 +91,9 @@ function MainGraphic(){
     noStroke();
     textSize(MAX_TEXT_SIZE);
     fill(0,0,0,255);
-    var main_text = text("INFINITE.INDUSTRIES", width/2, height/2-20);
+    var main_text = text("INFINITE.INDUSTRIES", width/2, height/2-20-MOBILE_TOP);
+
+    image(logo, width/2 - 30, height/2-MOBILE_TOP, 60, 60);
   }
 }
 
@@ -88,12 +101,12 @@ function CallToAction(){
   this.draw = function(){
     textFont(ctaFont);
     fill(199,21,133);
-    textSize(20);
+    textSize(24);
     if(!MOBILE_MODE){
-      var cta_text= text("Currently Presenting --> Ming Hong ***Instagram #featuredartist", width/2, height-150);
+      var cta_text= text("Micro-Release 0.0.1 --> JR Southard *** Tooth and Nail #3 (Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
     else{
-      var cta_text= text("Currently Presenting \nMing Hong ***Instagram #featuredartist", width/2, height-150);
+      var cta_text= text("Micro-Release 0.0.1 \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
   }
 }
@@ -121,22 +134,25 @@ function MouseDecorator(){
 
 function mouseClicked() {
   if(TRIGGER_MODE_1){
-    window.location.href = "./about.html";
+    window.location.href = "https://catalog-staging.infinite.industries";
   }
   if(TRIGGER_MODE_2){
-    window.open("https://www.instagram.com/1nfinite_1ndustries/");
+    window.location.href = "https://catalog-staging.infinite.industries";
   }
 }
-
 
 function testScreenSize(){
   if(width<768){
     MOBILE_MODE=true;
-    MAX_TEXT_SIZE=35;
+    MAX_TEXT_SIZE=30;
+    TOP_OFFSET=50;
+    MOBILE_TOP=100;
   }
   else{
     MOBILE_MODE=false;
     MAX_TEXT_SIZE=60;
+    TOP_OFFSET=50;
+    MOBILE_TOP=0;
   }
 }
 
