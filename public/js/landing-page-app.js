@@ -134,10 +134,10 @@ function MouseDecorator(){
 
 function mouseClicked() {
   if(TRIGGER_MODE_1){
-    window.location.href = "https://catalog-staging.infinite.industries";
+    window.location.href = "https://catalog.infinite.industries";
   }
   if(TRIGGER_MODE_2){
-    window.location.href = "https://catalog-staging.infinite.industries";
+    window.location.href = "https://catalog.infinite.industries";
   }
 }
 
