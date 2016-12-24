@@ -1,3 +1,8 @@
+body{
+  margin:0px;
+  padding:0px;
+}
+
 @font-face {
   font-family: 'Mechanic';
   src:url('../fonts/Mechanical.otf') format('opentype');
@@ -32,11 +37,20 @@
 
 @media only screen and (min-width: 768px) {
   .nav-member{
-    font-size: 20px;
+    font-size: 22px;
     padding-right:30px;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .nav-member{
+    font-size: 18px;
+    padding-right:25px;
+  }
+  #nav{
+    padding-top: 10px;
+  }
+}
 
 p{
     font-family: "Mechanic", sans-serif;

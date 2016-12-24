@@ -100,13 +100,14 @@ function MainGraphic(){
 function CallToAction(){
   this.draw = function(){
     textFont(ctaFont);
-    fill(199,21,133);
+    //fill(199,21,133);
+    fill(90);
     textSize(24);
     if(!MOBILE_MODE){
-      var cta_text= text("Micro-Release 0.0.1 --> JR Southard *** Tooth and Nail #3 (Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
+      var cta_text= text("Presenting --> James R Southard \nTooth and Nail #3 (Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
     else{
-      var cta_text= text("Micro-Release 0.0.1 \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
+      var cta_text= text("Presenting \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
   }
 }
