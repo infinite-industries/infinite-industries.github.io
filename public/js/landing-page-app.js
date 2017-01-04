@@ -15,7 +15,7 @@ var logo;
 
 function preload() {
   titleFont = loadFont("public/fonts/AsimovWid.otf");
-  ctaFont = loadFont("public/fonts/MechanicalBdCond.otf");
+  ctaFont = loadFont("public/fonts/Mechanical.otf");
   logo = loadImage("public/images/site-logo.png");
 }
 
@@ -104,10 +104,12 @@ function CallToAction(){
     fill(90);
     textSize(24);
     if(!MOBILE_MODE){
-      var cta_text= text("Presenting --> James R Southard \nTooth and Nail #3 (Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
+      //var cta_text= text("Presenting --> James R Southard \nTooth and Nail #3 (Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
+      var cta_text=text("Open experiments in art and culture",width/2, height-150-MOBILE_TOP);
     }
     else{
-      var cta_text= text("Presenting \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
+      var cta_text=text("Open experiments\nin art and culture", width/2, height-150-MOBILE_TOP);
+      //var cta_text= text("Presenting \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
   }
 }

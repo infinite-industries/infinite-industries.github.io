@@ -3,6 +3,7 @@ body{
   padding:0px;
 }
 
+
 @font-face {
   font-family: 'Mechanic';
   src:url('../fonts/Mechanical.otf') format('opentype');
@@ -28,33 +29,58 @@ body{
 
 .nav-member{
   display: inline;
-  font-family: "Mechanic", sans-serif;
+  /*font-family: 'Space Mono', monospace;
+  font-family: 'Karla', sans-serif;*/
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
 }
 
 .social-media-call-to-action{
   padding-left: 25px;
 }
 
+.lead{
+  font-style: italic;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-member{
-    font-size: 22px;
+    font-size: 25px;
     padding-right:30px;
+  }
+
+  p{
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .question{
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .nav-member{
-    font-size: 18px;
+    font-size: 20px;
     padding-right:25px;
   }
   #nav{
     padding-top: 10px;
   }
+  p{
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      padding-top: 20px;
+  }
+  .question{
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: bold;
+  }
+
 }
 
-p{
-    font-family: "Mechanic", sans-serif;
-}
+
 
 a:link, a:visited{
     color: #C71585;
@@ -75,7 +101,7 @@ a:active {
 #mc_embed_signup .button{
   color: #C71585;
   background-color: #fff;
-  font-family: "Mechanic", sans-serif;
+  font-family: 'Space Mono', monospace;
   font-size: 18px;
   border: 1px solid #C71585;
 }
@@ -97,4 +123,8 @@ a:active {
 .about-text{
   font-size: 16px;
   margin-top:30px;
+}
+
+.logo-lg{
+  margin-top: 10px;
 }
