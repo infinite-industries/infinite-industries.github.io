@@ -108,7 +108,7 @@ function CallToAction(){
       var cta_text=text("Open experiments in art and culture",width/2, height-150-MOBILE_TOP);
     }
     else{
-      var cta_text=text("Open experiments\nin art and culture", width/2, height-150-MOBILE_TOP);
+      var cta_text=text("\nOpen experiments\nin art and culture", width/2, height-150-MOBILE_TOP);
       //var cta_text= text("Presenting \n\nJR Southard \nTooth and Nail #3 \n(Pennsylvania/Kentucky)", width/2, height-150-MOBILE_TOP);
     }
   }
